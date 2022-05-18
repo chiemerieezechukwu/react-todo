@@ -1,15 +1,19 @@
-import Button from "./Button"
-import Modal from "./Modal"
-import TodoItem from "./TodoItem"
+import Button from "./Button";
+import TodoItem from "./TodoItem";
 
-function TodoList() {
-
-
+const TodoList = ({ todoData }) => {
   return (
     <>
-      <Button buttonText={"Add"} twButtonBgColor={"bg-blue-600"}/>
+      <Button buttonText={"Add"} twButtonBgColor={"bg-blue-600"} />
+      {todoData.map(({ title, deadline, status }) => (
+        <TodoItem
+          todoTitle={title}
+          todoDeadline={deadline}
+          itemStatus={status}
+        />
+      ))}
     </>
-  )
-}
+  );
+};
 
-export default TodoList
+export default TodoList;

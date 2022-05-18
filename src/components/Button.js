@@ -1,7 +1,7 @@
 import React from "react";
 
-function Button({ buttonText, twButtonBgColor }) {
-  const classNames = `inline-block px-6 py-2.5 text-white font-medium text-xs leading-tight shadow-md ${twButtonBgColor}`
+const Button = ({ buttonText, twButtonBgColor }) => {
+  const classNames = `inline-block px-6 py-2.5 text-white font-medium text-xs leading-tight shadow-md ${twButtonBgColor}`;
 
   return (
     <>
@@ -10,6 +10,6 @@ function Button({ buttonText, twButtonBgColor }) {
       </button>
     </>
   );
-}
+};
 
 export default Button;

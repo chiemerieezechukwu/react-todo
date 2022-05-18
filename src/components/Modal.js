@@ -1,9 +1,5 @@
-import React from 'react'
+const Modal = ({ setTodoData }) => {
+  return <></>;
+};
 
-function ModalComponent() {
-  return (
-    <div>ModalComponent</div>
-  )
-}
-
-export default ModalComponent
+export default Modal;

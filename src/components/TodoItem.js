@@ -1,9 +1,28 @@
-import React from 'react'
+import React from "react";
 
-function TodoItem() {
+const TodoItem = ({ itemStatus, todoTitle, todoDeadline }) => {
+  const statusToColor = {
+    done: "bg-green-300",
+    notStarted: "bg-red-300",
+    inProgress: "bg-amber-300",
+    default: "bg-sky-200"
+  };
+
+  const statusColor = statusToColor[itemStatus] || statusToColor["default"]
+
   return (
-    <div>TodoItem</div>
-  )
-}
+    <>
+      <div className="flex w-3/4 h-fit px-8 py-2 m-auto bg-gray-300 mb-4 relative">
+        <div
+          className={`${statusColor} h-full w-3 absolute left-0 top-0`}
+        ></div>
+        <div>
+          <div className="font-bold">{todoTitle}</div>
+          <div className="italic">Deadline: {todoDeadline}</div>
+        </div>
+      </div>
+    </>
+  );
+};
 
-export default TodoItem
+export default TodoItem;

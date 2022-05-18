@@ -1,11 +1,11 @@
-import Todo from "./pages"
+import Todo from "./pages";
 
-function App() {
+const App = () => {
   return (
     <>
       <Todo />
     </>
   );
-}
+};
 
 export default App;
